@@ -1,0 +1,28 @@
+--Creating a clothing store database
+CREATE TABLE mystore(id INTEGER, clothtype TEXT, quantity INTEGER,price NUMERIC);
+
+--Inserting values into the table created above
+INSERT INTO mystore VALUES(1, "Roundneck", 15,300), 
+(2, 'Polo Shirts', 22, 250), 
+(3, "Chinos", 39, 40), 
+(4,"Turtle Neck", 20, 32),
+(5, "Bed Sheet", 40, 80), 
+(6, "Lacoste",40,320),
+(7,"Skirts",55,15),
+(8,"Gucci Chain",3,200),
+(9,"Duvet",15, 40),
+(10,"Airbrush",15,10),
+(11,"Socks",22,5),
+(12,"Curtains",10,50),
+(13,"Thermals",50,25),
+(14,"Shoe Polish",22,10),
+(15, 'Blanket', 7, 30);
+
+-- selecting all data in the table and ordering by price from the most expensive to the least expensive
+SELECT * FROM mystore ORDER BY price desc;
+
+--Selecting to know the value of all clothing materials in the store and naming the queried data
+SELECT SUM(price)"store value" FROM mystore;
+
+
+SELECT AVG(price)"avg bulk item price" FROM mystore;
